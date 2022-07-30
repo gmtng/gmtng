@@ -1,13 +1,14 @@
-#include<stdio.h>//Ô¤´¦ÀíÖ¸Áî Í·ÎÄ¼ş
-int main(viod)/*·µ»ØÀàĞÍÒÔ¼°cµÄ»ù±¾Ä£¿é*/
+#include<stdio.h>//é¢„å¤„ç†æŒ‡ä»¤ å¤´æ–‡ä»¶
+int main(viod)/*è¿”å›ç±»å‹ä»¥åŠcçš„åŸºæœ¬æ¨¡å—*/
 {
-	int num;//ÉùÃ÷±äÁ¿
-	num = 1;//¸³Öµ£¨CµÄ»ù±¾²Ù×÷Ö®Ò»£©ÎªnumÔ¤Áô¿Õ¼ä
+	int num;//å£°æ˜å˜é‡
+	num = 1;//èµ‹å€¼ï¼ˆCçš„åŸºæœ¬æ“ä½œä¹‹ä¸€ï¼‰ä¸ºnumé¢„ç•™ç©ºé—´
 
-	printf("I am a simple");//±ê×¼º¯Êıprintf()
+	printf("I am a simple");//æ ‡å‡†å‡½æ•°printf()
 	printf("computer.\n");
 	printf("My favorier  number is %d because it is first.\n", num);
 
-	getchar();
-	return 0;
+	getchar();//è®©ç¨‹åºç­‰å¾…å‡»é”®
+	return 0;//è¿”å›å€¼ä¸º0
+
 }
