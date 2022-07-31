@@ -21,4 +21,4 @@ void jiuzhi(void)
 	int a = 1;
 	int b = a * 5;
 	printf("%d\n", b);
-}//成功运行，没有bag.
+}//鎴愬姛杩愯锛屾病鏈塨ag.
