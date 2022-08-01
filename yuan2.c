@@ -1,5 +1,6 @@
 #include<stdio.h>
-#define zhi "My second code"
+#define zhi "My second code"//我的第二个代码
+
 void one_three(void);
 void jiuzhi(void);
 int main(void)
