@@ -9,7 +9,7 @@ int main(void)
 	printf("Let's check ti out.\n");
 	printf（“请输入您的体重（以磅为单位）：”）；
 		
-	getchar();//等待用户输入，输入后回车继续
+	getchar（）;等待用户输入，输入后回车继续，，如158
 	scanf_s("%f",&weight);
 	//VS编译器特有，觉得scanf()不安全，自己定义了scanf_s(）
 	//获取输入_英磅	
