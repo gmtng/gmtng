@@ -1,3 +1,4 @@
+/*包含打印，函数原型，计算*/
 #include<stdio.h>
 #define zhi "My second code"//我的第二个代码
 
