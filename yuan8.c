@@ -1,27 +1,34 @@
-//0x00007FF7FA7F30FD ´¦ÓĞÎ´¾­´¦ÀíµÄÒì³£(ÔÚ Project8.exe ÖĞ): ¶ÑÕ» Cookie ¼ì²â´úÂë¼ì²âµ½»ùÓÚ¶ÑÕ»µÄ»º³åÇøÒç³ö¡£
-//ÒÔÉÏÎÊÌâÊÇÓÉÓÚ¸ß°æ±¾µÄVSËù´øÀ´µÄ£¬¿ÉÒÔÓÃÏÂĞĞ´úÂë½â¾ö¡£(scanf¾Í²»Òª¼Ó_sÁË£©
+//0x00007FF7FA7F30FD å¤„æœ‰æœªç»å¤„ç†çš„å¼‚å¸¸(åœ¨ Project8.exe ä¸­): å †æ ˆ Cookie æ£€æµ‹ä»£ç æ£€æµ‹åˆ°åŸºäºå †æ ˆçš„ç¼“å†²åŒºæº¢å‡ºã€‚
+//ä»¥ä¸Šé—®é¢˜æ˜¯ç”±äºé«˜ç‰ˆæœ¬çš„VSæ‰€å¸¦æ¥çš„ï¼Œå¯ä»¥ç”¨ä¸‹è¡Œä»£ç è§£å†³ã€‚(scanfå°±ä¸è¦åŠ _säº†ï¼‰
 #pragma warning(disable:4996)
 #include<stdio.h>
 #include<string.h>
-#define DENSITY 62.4
+#define DENSITY 62.4//äººä½“å¯†åº¦ï¼Œç£…/ç«‹æ–¹è‹±å°º
 int main(void)
 {
-	float weight, volume;
-	int size, letters;
-	char name[40];//(ÕâÀïÓĞÎÊÌâµ«ÎÒ½â¾ö²»ÁË)ÖØĞÂÊáÀíÒ»ÏÂº¯ÊıµÄÂß¼­£¬Ê¹ÓÃÕıÈ·µÄË÷Òı¼´¿É
+	float weight;
+	int size, letters,
+		conversion = 0.972;//1ç£…=0.972æ–¤
+	double _conversion = 35.3146667;//1ç«‹æ–¹ç±³=35.3146667ç«‹æ–¹è‹±å°º
+	long double volume;
+	char name[40];//å¯å®¹çº³40å­—ç¬¦çš„ç»„æ•°ï¼Œ(è¿™é‡Œæœ‰é—®é¢˜ä½†æˆ‘è§£å†³ä¸äº†)é‡æ–°æ¢³ç†ä¸€ä¸‹å‡½æ•°çš„é€»è¾‘ï¼Œä½¿ç”¨æ­£ç¡®çš„ç´¢å¼•å³å¯
 
-	printf("Hi!what's your first name\n");
-	scanf("%s",name);
-	printf("%s,what's your weight in pounds?\n",name);
-	scanf("%f",&weight);
-	size = sizeof(name);
-	letters = strlen(name);
-	volume = weight / DENSITY;
-	printf("Well,%s your volume is %2.2f cubic feet.\n", name, volume );
-	printf("Also,your first name has %d letters,\n",letters);
-	printf("and we have %d bytes to store it .\n",size);
+	printf("Hi!what's your first name\n");//è¾“å…¥ä½ çš„åå­—
+	scanf("%s", name);
+	printf("%s,what's your weight in pound?\n", name);//è¾“å…¥ä½ çš„æ–¤æ•°
+	scanf("%f", &weight);
+
+	size = sizeof(name);//å ç”¨å­—èŠ‚
+	letters = strlen(name);//å ç”¨å­—ç¬¦
+	volume = weight / DENSITY / conversion / _conversion;//æœ‰ç‚¹å¤šä½™ï¼Œä¸‹æ¬¡å¯ä»¥æ”¹è¿›æˆè‡ªå¸¦å•ä½æ¢ç®—
+	//é‚£æ˜¯ä¸æ˜¯è¦ä¸¤æ¡ç¨‹åºè·¯å¾„ï¼Ÿ
+
+	printf("Well,%s your volume is %2.2f cubic meters.\n", name, volume);//å›ç­”ä½ çš„ä½“ç§¯ï¼ˆç«‹æ–¹ç±³ï¼‰
+	printf("Also,your first name has %d letters,\n", letters);//å›ç­”åå­—å­—æ¯æ•°
+	printf("and we have %d bytes to store it .\n", size);//åå­—å ç”¨çš„å­—èŠ‚
 
 	return 0;
 }
-//ÏÂ´ÎÔÙÀ´½â¾öÕâ¸öbag°É(©Ğ©Ğ©n©Ğ©Ğ)
-//bagÒÑ½â¾ö(£şy¨Œ,£ş)¨q 
+//ä¸‹æ¬¡å†æ¥è§£å†³è¿™ä¸ªbagå§(â”¬â”¬ï¹â”¬â”¬)
+//bagå·²è§£å†³(ï¿£yâ–½,ï¿£)â•­
+//_conversion å°¾æ•°è¿‡å¤šè®© volume ç»“æœå®¹æ˜“ä¸º infï¼ˆæ— é™ï¼‰
