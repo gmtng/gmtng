@@ -1,14 +1,21 @@
 #include<stdio.h>
+#define SCE_PER_MIN 60//1∑÷÷”60√Î
 int main(void)
 {
-	int ultra = 0, super = 0;
-
-	while (super < 5);
+	int sec, min, left;
+	
+	printf("Convert seconds to minutes and seconds!\n");
+	printf("Enter the numder of seconds (<=0 to quit):\n");
+	scanf_s("%d", &sec);
+	while (sec > 0)
 	{
-		super++;
-		++ultra;
-		printf("super = %d,ultra = %d \n",super,ultra);
+		min = sec / SCE_PER_MIN;
+		left = sec % SCE_PER_MIN;
+		printf("%d seconds is %d minutes,%d ceconds.\n",sec,min,left);
+		printf("Enter next value (<=0 to quit):\n");
+		scanf_s("%d",&sec);
 	}
+	printf("Done!\n");
 
 	return 0;
 }
